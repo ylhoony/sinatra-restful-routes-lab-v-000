@@ -5,14 +5,14 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
-  
+
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
   end
 
   get '/recipes/:id' do
-
+    @recipe = Recipe.find_by(id: params[:id])
   end
 
   delete '/recipes/:id/delete' do
