@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes' do
-
+    binding.pry
 
     # redirect '/'
   end
