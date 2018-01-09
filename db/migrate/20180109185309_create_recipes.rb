@@ -1,4 +1,7 @@
 class CreateRecipes < ActiveRecord::Migration
-  def change
+  def up
+    create_tables :recipes do |t|
+      
+    end
   end
 end
